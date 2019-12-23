@@ -22,6 +22,8 @@ public class BubbleSort {
      * 遍历完成一遍后从头开始继续遍历
      * 内层循环比较数组两个数的大小
      * 是否符合切换位置条件
+     * 最好时时间复杂度O(1)
+     * 最坏时时间复杂度O(n2)
      * @param sort1 sort
      */
     private static void sort(int[] sort1) {
