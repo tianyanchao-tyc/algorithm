@@ -30,13 +30,22 @@ public class BubbleSort {
         if (sort1 == null || sort1.length == 0) {
             return;
         }
+        Integer temp;
+        //排序优化，每次循环设置值为false
+        //只要进行数据交换设置值为true
+        boolean flag = false;
         for (int i = 1; i < sort1.length; i++) {
             for (int j = 0; j < sort1.length - i; j++) {
+                flag = false;
                 if (sort1[j] > sort1[j + 1]) {
-                    Integer temp = sort1[j + 1];
+                    temp = sort1[j + 1];
                     sort1[j + 1] = sort1[j];
                     sort1[j] = temp;
+                    flag = true;
                 }
+            }
+            if (!flag) {
+                return;
             }
         }
     }
